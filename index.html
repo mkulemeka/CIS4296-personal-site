@@ -24,21 +24,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.3/dist/iconify-icon.min.js"></script>
 
-    <!-- Remove this and fill in your name & photo in the required areas -->
-    <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
-    </script>
-
     <link href="styles/theme.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
 
@@ -47,10 +32,10 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top">
       <div class="container-fluid p-2 px-lg-2 py-lg-0">
         <!-- Set Name Here -->
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="#">MK</a>
         <button
           class="navbar-toggler bg-white"
           type="button"
@@ -91,21 +76,23 @@
       id="home"
     >
       <div
-        class="rounded-circle border border-3 border-primary p-1 mb-3 mt-0 mt-lg-5"
+        class="rounded-circle border border-3 border-secondary p-1 mb-3 mt-5 mt-lg-5"
       >
-      <!-- Set Photo Here -->
+        <!-- Set Photo Here -->
         <img
           style="height: 150px; width: 150px"
           class="rounded-circle"
           draggable="false"
           id="profilepic"
+          alt=""
+          src="./images/profile.jpg"
         />
       </div>
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
           Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
-          <span id="name"></span>!
+          <span id="name">Mtendere Kulemeka (MK)</span>!
         </h4>
       </div>
       <div class="row mx-auto">
@@ -120,6 +107,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="Python"
+            alt=""
           />
         </div>
         <div class="col text-center">
@@ -128,6 +116,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="Angular"
+            alt=""
           />
         </div>
         <div class="col text-center">
@@ -136,6 +125,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="TypeScript"
+            alt=""
           />
         </div>
 
@@ -145,6 +135,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="C#"
+            alt=""
           />
         </div>
         <div class="col text-center">
@@ -153,6 +144,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="Node.js"
+            alt=""
           />
         </div>
         <div class="col text-center">
@@ -161,6 +153,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="Java"
+            alt=""
           />
         </div>
 
@@ -170,6 +163,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="ASP.NET"
+            alt=""
           />
         </div>
         <div class="col text-center">
@@ -178,6 +172,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="Microsoft SQL Server"
+            alt=""
           />
         </div>
         <div class="col text-center">
@@ -186,6 +181,7 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="MongoDB"
+            alt=""
           />
         </div>
       </div>
@@ -253,6 +249,7 @@
           efficitur at.
         </p>
       </div>
+
       <div class="row mt-3 next">
         <a href="#courses" class="col"
           ><iconify-icon
@@ -324,13 +321,54 @@
           <h5 class="m-0">Database Management Systems</h5>
         </a>
         <div class="row mt-5 next justify-content-center align-items-center">
-          <a href="#contact" class="text-center"
+          <a href="#hobbies" class="text-center"
             ><iconify-icon
               icon="material-symbols:arrow-circle-down"
               class="arrow-next"
             ></iconify-icon
           ></a>
         </div>
+      </div>
+    </div>
+    <div
+      class="hobbies min-vh-100 d-flex justify-content-center flex-column align-items-center"
+    >
+      <h2 class="title" id="hobbies">Hobbies</h2>
+      <h5 class="mx-auto text-primary">We all gotta have fun...right?</h5>
+      <ul class="d-flex w-100 flex-wrap gap-4 justify-content-center mt-3">
+        <li
+          class="hobby col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+        >
+          Gaming🎮
+        </li>
+        <li
+          class="hobby col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+        >
+          Programming💻
+        </li>
+        <li
+          class="hobby col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+        >
+          Reading📖
+        </li>
+        <li
+          class="hobby col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+        >
+          Traveling✈️
+        </li>
+        <li
+          class="hobby col-11 col-lg-5 text-center course class-card p-4 rounded text-decoration-none d-flex justify-content-center align-items-center"
+        >
+          Trying out new things🫡
+        </li>
+      </ul>
+      <div class="row mt-5 next justify-content-center align-items-center">
+        <a href="#contact" class="text-center"
+          ><iconify-icon
+            icon="material-symbols:arrow-circle-down"
+            class="arrow-next"
+          ></iconify-icon
+        ></a>
       </div>
     </div>
     <div
@@ -396,11 +434,11 @@
     <script>
       const tooltipTriggerList = document.querySelectorAll(
         '[data-bs-toggle="tooltip"]'
-      )
+      );
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) =>
           new bootstrap.Tooltip(tooltipTriggerEl, { delay: { hide: 50 } })
-      )
+      );
     </script>
   </body>
 </html>
